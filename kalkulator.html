@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kalkulator akwarium | Aqua Zakątek</title>
+  <link href="bootstrap/bootstrap.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg sticky-top">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">Aqua <span>Zakątek</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto">
+            <li><a class="nav-link" href="index.html">Start</a></li>
+            <li><a class="nav-link" href="ryby.html">Ryby</a></li>
+            <li><a class="nav-link" href="rosliny.html">Rośliny</a></li>
+            <li><a class="nav-link" href="akwarium.html">Akwarium</a></li>
+            <li><a class="nav-link active" href="kalkulator.html">Kalkulator</a></li>
+            <li><a class="nav-link" href="kontakt.html">Kontakt</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main class="section-band">
+    <div class="container">
+      <h1 class="section-title">Kalkulator litrażu i obsady</h1>
+      <div class="accent-line mb-4"></div>
+      <div class="row g-4">
+        <section class="col-lg-6">
+          <div class="info-card bg-white p-4">
+            <form>
+              <fieldset>
+                <legend>Wymiary zbiornika</legend>
+                <label class="form-label" for="dlugosc">Długość w cm</label>
+                <input class="form-control mb-3" type="number" id="dlugosc" min="20" max="250" required>
+                <label class="form-label" for="szerokosc">Szerokość w cm</label>
+                <input class="form-control mb-3" type="number" id="szerokosc" min="20" max="120" required>
+                <label class="form-label" for="wysokosc">Wysokość w cm</label>
+                <input class="form-control mb-3" type="number" id="wysokosc" min="20" max="120" required>
+                <label class="form-label" for="styl">Styl akwarium</label>
+                <select class="form-select mb-3" id="styl">
+                  <option value="towarzyskie">Towarzyskie</option>
+                  <option value="roslinne">Roślinne</option>
+                  <option value="krewetkarium">Krewetkarium</option>
+                </select>
+                <button class="btn btn-primary" id="przyciskOblicz" type="button">Oblicz</button>
+              </fieldset>
+            </form>
+          </div>
+        </section>
+        <section class="col-lg-6">
+          <div class="result-box p-4 mb-4" id="wynikKalkulatora">Wynik pojawi się po kliknięciu przycisku.</div>
+          <div class="info-card bg-white p-4">
+            <h2 class="h5">Moja lista ryb</h2>
+            <label class="form-label" for="gatunek">Gatunek</label>
+            <input class="form-control mb-2" id="gatunek" type="text" placeholder="np. neon innesa">
+            <label class="form-label" for="liczba">Liczba</label>
+            <input class="form-control mb-2" id="liczba" type="number" min="1" value="6">
+            <label class="form-label" for="notatka">Notatka</label>
+            <input class="form-control mb-3" id="notatka" type="text" placeholder="np. wpuścić po dojrzewaniu">
+            <button class="btn btn-success" type="button" onclick="zapiszRybe()">Zapisz rybę</button>
+            <div id="wynikMagazynu" class="mt-3"></div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+  <footer class="py-4"><div class="container">&copy; 2026 Aqua Zielony Zakątek</div></footer>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="bootstrap/bootstrap.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
