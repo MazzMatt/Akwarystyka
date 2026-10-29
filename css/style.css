@@ -1,0 +1,111 @@
+:root {
+  --aqua-blue: #147d86;
+  --deep-blue: #143642;
+  --clear-blue: #2b9ad6;
+  --nav-blue: #0f5f91;
+  --reef-green: #3d8b5f;
+  --sun-yellow: #f2c14e;
+  --ink: #263238;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--ink);
+  font-family: "Trebuchet MS", "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(180deg, #d9f0ff 0%, #f4fbff 44%, #eff9f0 78%, #fff7dc 100%);
+  background-attachment: fixed;
+}
+
+.navbar {
+  margin: 1rem auto 0;
+  width: min(1120px, calc(100% - 2rem));
+  position: relative;
+  background: #ffffff;
+  border: 1px solid rgba(15, 95, 145, 0.16);
+  border-bottom: 4px solid var(--clear-blue);
+  border-radius: 8px;
+  box-shadow: 0 0.8rem 1.8rem rgba(15, 95, 145, 0.14);
+  backdrop-filter: blur(10px);
+}
+
+.navbar .container {
+  max-width: 1120px;
+  position: relative;
+  z-index: 1;
+  gap: 1rem;
+}
+
+.navbar-brand {
+  color: var(--nav-blue);
+  letter-spacing: 0;
+  padding: 0.45rem 0.8rem;
+  border: 0;
+  border-radius: 8px;
+  background: rgba(43, 154, 214, 0.1);
+}
+
+.navbar-brand span {
+  color: var(--reef-green);
+}
+
+.navbar-nav .nav-link {
+  color: #315163;
+  font-weight: 700;
+  position: relative;
+  margin-inline: 0.05rem;
+  border-radius: 8px;
+  padding: 0.55rem 0.85rem;
+  transition: color 0.18s ease, background-color 0.18s ease;
+}
+
+.navbar-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0.85rem;
+  right: 0.85rem;
+  bottom: 0.25rem;
+  height: 3px;
+  background: var(--sun-yellow);
+  border-radius: 8px;
+  opacity: 0;
+  transition: opacity 0.18s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active,
+.navbar-nav .show > .nav-link {
+  color: var(--nav-blue);
+  background: rgba(43, 154, 214, 0.12);
+}
+
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link.active::after,
+.navbar-nav .show > .nav-link::after {
+  opacity: 1;
+}
+
+.navbar-toggler {
+  border-color: rgba(15, 95, 145, 0.28);
+  background: rgba(43, 154, 214, 0.08);
+}
+
+.dropdown-menu {
+  border: 1px solid rgba(15, 95, 145, 0.14);
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0 1rem 2rem rgba(15, 95, 145, 0.16);
+}
+
+.dropdown-item {
+  color: #315163;
+  font-weight: 700;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+  color: var(--nav-blue);
+  background: rgba(242, 193, 78, 0.28);
+}
