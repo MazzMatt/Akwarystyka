@@ -109,3 +109,346 @@ body {
   color: var(--nav-blue);
   background: rgba(242, 193, 78, 0.28);
 }
+
+.hero {
+  min-height: 72vh;
+  margin-top: -5.15rem;
+  padding-top: 7rem;
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  background:
+    linear-gradient(100deg, rgba(15, 95, 145, 0.84) 0%, rgba(20, 125, 134, 0.64) 54%, rgba(61, 139, 95, 0.24) 100%),
+    url("../img/akwarium-roslinne-tlo.jpg") center / cover no-repeat;
+}
+
+.hero h1 {
+  max-width: 11ch;
+  line-height: 0.98;
+}
+
+.hero .lead {
+  padding-left: 1rem;
+  border-left: 5px solid var(--sun-yellow);
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 7rem;
+  background: linear-gradient(0deg, #d8f0ff, transparent);
+}
+
+.hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+.section-band {
+  padding: 4rem 0;
+  background: rgba(255, 255, 255, 0.72);
+  border-top: 1px solid rgba(43, 154, 214, 0.14);
+}
+
+main > .section-band:nth-of-type(even) {
+  background: rgba(216, 240, 255, 0.58);
+}
+
+.section-band.bg-white {
+  background: linear-gradient(90deg, rgba(20, 125, 134, 0.08), rgba(255, 255, 255, 0.82)), #ffffff !important;
+}
+
+.section-title {
+  color: var(--deep-blue);
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+.accent-line {
+  width: 5.4rem;
+  height: 0.5rem;
+  border-radius: 8px;
+  background: linear-gradient(90deg, var(--aqua-blue), var(--sun-yellow), var(--reef-green));
+}
+
+.info-card,
+.fish-card,
+.plant-card {
+  border: 0;
+  border-radius: 8px;
+  box-shadow: 0 0.8rem 0 rgba(43, 154, 214, 0.12), 0 1rem 2rem rgba(20, 54, 66, 0.1);
+}
+
+.info-card,
+.result-box {
+  background: rgba(255, 255, 255, 0.9) !important;
+}
+
+.fish-card,
+.plant-card {
+  overflow: hidden;
+  background: #ffffff;
+  border-left: 6px solid var(--clear-blue);
+  border-bottom: 0;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.fish-card:hover,
+.plant-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0.8rem 0 rgba(242, 193, 78, 0.18), 0 1.2rem 2rem rgba(20, 54, 66, 0.13);
+}
+
+.fish-card img,
+.plant-card img {
+  height: 205px;
+  object-fit: cover;
+  clip-path: none;
+}
+
+.fish-card .card-body,
+.plant-card .card-body {
+  padding-top: 0.6rem;
+}
+
+.setup-carousel img {
+  height: 390px;
+  object-fit: cover;
+}
+
+.map-frame {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.map-frame iframe {
+  width: 100%;
+  height: 240px;
+  border: 0;
+  display: block;
+}
+
+.location-panel {
+  display: flex;
+  align-items: stretch;
+  gap: 1.5rem;
+}
+
+.location-copy {
+  flex: 1 1 320px;
+}
+
+.location-panel .map-frame {
+  flex: 1.35 1 420px;
+}
+
+.badge-reef {
+  background: rgba(61, 139, 95, 0.14);
+  color: #275a3d;
+  border: 1px solid rgba(61, 139, 95, 0.28);
+}
+
+.badge-sun {
+  background: rgba(242, 193, 78, 0.26);
+  color: #725312;
+  border: 1px solid rgba(242, 193, 78, 0.6);
+}
+
+.photo-gallery {
+  border: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0.7rem 0 rgba(242, 193, 78, 0.24), 0 1.2rem 2.5rem rgba(20, 54, 66, 0.16);
+}
+
+.zielony {
+  background-color: rgba(124, 194, 66, 0.22) !important;
+  border-color: rgba(44, 162, 95, 0.5) !important;
+}
+
+.photo-gallery img {
+  height: 330px;
+  object-fit: cover;
+}
+
+.photo-gallery .carousel-caption {
+  background: rgba(20, 54, 66, 0.82);
+  border-radius: 8px;
+  left: 1rem;
+  right: 1rem;
+  bottom: 1rem;
+}
+
+.setup-notes {
+  position: relative;
+  padding: 1.25rem 1.35rem;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(20, 54, 66, 0.12);
+  border-radius: 8px;
+  box-shadow: 0 0.8rem 1.8rem rgba(20, 54, 66, 0.08);
+  border-left: 5px solid var(--aqua-blue);
+}
+
+.setup-progress {
+  display: flex;
+  gap: 0.45rem;
+  margin-bottom: 0.85rem;
+}
+
+.setup-progress span {
+  height: 0.45rem;
+  flex: 1;
+  border-radius: 0;
+  background: rgba(20, 54, 66, 0.12);
+}
+
+.setup-progress span.active {
+  background: linear-gradient(90deg, var(--aqua-blue), var(--sun-yellow), var(--reef-green));
+}
+
+.setup-note {
+  display: none;
+}
+
+.setup-note.active {
+  display: block;
+}
+
+.setup-label {
+  display: inline-block;
+  margin-bottom: 0.45rem;
+  padding: 0.22rem 0.65rem;
+  color: var(--deep-blue);
+  font-size: 0.82rem;
+  font-weight: 700;
+  border-radius: 8px;
+  background: rgba(242, 193, 78, 0.38);
+}
+
+.setup-note h2 {
+  color: var(--deep-blue);
+  margin-bottom: 0.3rem;
+}
+
+.setup-note p {
+  margin-bottom: 0;
+  color: #38546f;
+}
+
+table.table-aqua thead {
+  background: var(--deep-blue);
+  color: white;
+}
+
+table.table-aqua tbody tr:nth-child(even) {
+  background: rgba(44, 162, 95, 0.08);
+}
+
+fieldset {
+  border: 1px solid rgba(20, 54, 66, 0.14);
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+legend {
+  float: none;
+  width: auto;
+  padding: 0 0.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--deep-blue);
+}
+
+.error {
+  color: #b00020;
+  min-height: 1.25rem;
+  font-size: 0.9rem;
+}
+
+.result-box {
+  min-height: 5rem;
+  border-radius: 8px;
+  border: 1px solid rgba(20, 54, 66, 0.1);
+}
+
+.wynik-poradnika {
+  border-left: 0.35rem solid var(--aqua-blue);
+  box-shadow: inset 0 0 0 1px rgba(20, 54, 66, 0.06);
+}
+
+.wynik-poradnika.poradnik-start {
+  border-left-color: var(--aqua-blue);
+}
+
+.wynik-poradnika.poradnik-woda {
+  border-left-color: var(--reef-green);
+}
+
+.wynik-poradnika.poradnik-swiatlo {
+  border-left-color: var(--sun-yellow);
+}
+
+.notatka-ryby {
+  padding: 0.75rem;
+  color: #38546f;
+  background: rgba(20, 125, 134, 0.08);
+  border-left: 0.25rem solid var(--aqua-blue);
+  border-radius: 8px;
+}
+
+footer {
+  background: #143642;
+  color: #e8fbf7;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .navbar-nav .nav-link,
+  .navbar-nav .nav-link::after,
+  .fish-card,
+  .plant-card {
+    animation: none;
+    transition: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .navbar {
+    margin-top: 0.75rem;
+  }
+  .hero {
+    min-height: 68vh;
+    text-align: center;
+    margin-top: -4.5rem;
+  }
+  .hero h1 {
+    max-width: none;
+  }
+  .hero .lead {
+    padding-left: 0;
+    border-left: 0;
+    border-top: 4px solid var(--sun-yellow);
+    padding-top: 0.8rem;
+  }
+  .section-band {
+    padding: 3rem 0;
+  }
+  .fish-card img,
+  .plant-card img {
+    height: 150px;
+  }
+  .setup-carousel img {
+    height: 240px;
+  }
+  .location-panel {
+    flex-direction: column;
+  }
+}
+
+@media (orientation: landscape) and (max-width: 900px) {
+  .hero {
+    min-height: 88vh;
+  }
+}
