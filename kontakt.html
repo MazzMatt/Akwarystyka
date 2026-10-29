@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kontakt | Aqua Zakątek</title>
+  <link href="bootstrap/bootstrap.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg sticky-top">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">Aqua <span>Zakątek</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto">
+            <li><a class="nav-link" href="index.html">Start</a></li>
+            <li><a class="nav-link" href="ryby.html">Ryby</a></li>
+            <li><a class="nav-link" href="rosliny.html">Rośliny</a></li>
+            <li><a class="nav-link" href="akwarium.html">Akwarium</a></li>
+            <li><a class="nav-link" href="kalkulator.html">Kalkulator</a></li>
+            <li><a class="nav-link active" href="kontakt.html">Kontakt</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main class="section-band">
+    <div class="container">
+      <h1 class="section-title">Kontakt z doradcą akwarystycznym</h1>
+      <div class="accent-line mb-4"></div>
+      <div class="row g-4">
+        <section class="col-lg-7">
+          <div class="info-card bg-white p-4">
+            <form id="formularzKontaktowy" action="#" method="post" novalidate>
+              <fieldset>
+                <legend>Dane wiadomości</legend>
+                <label class="form-label" for="imie">Imię lub nazwa</label>
+                <input class="form-control" type="text" id="imie" name="imie" required title="Minimum 3 znaki">
+                <div id="bladImienia" class="error"></div>
+                
+                <label class="form-label" for="email">E-mail</label>
+                <input class="form-control" type="email" id="email" name="email" required>
+                <div id="bladEmaila" class="error"></div>
+                
+                <label class="form-label" for="temat">Temat</label>
+                <select class="form-select" id="temat" name="temat" required>
+                  <option value="">Wybierz temat</option>
+                  <option>Dobór obsady</option>
+                  <option>Rośliny i nawożenie</option>
+                  <option>Problem z parametrami</option>
+                </select>
+                <div id="bladTematu" class="error"></div>
+                
+                <label class="form-label" for="wiadomosc">Wiadomość</label>
+                <textarea class="form-control" id="wiadomosc" name="wiadomosc" rows="5" minlength="12" required></textarea>
+                <div id="bladWiadomosci" class="error"></div>
+                
+                <div class="form-check my-3">
+                  <input class="form-check-input" type="checkbox" value="tak" id="zgoda" required>
+                  <label class="form-check-label" for="zgoda">Zgadzam się na kontakt zwrotny.</label>
+                </div>
+                
+                <button class="btn btn-primary" type="submit">Wyślij</button>
+                <button class="btn btn-outline-secondary" type="reset">Wyczyść</button>
+              </fieldset>
+            </form>
+          </div>
+        </section>
+        <aside class="col-lg-5">
+          <div class="result-box p-4" id="podsumowanieKontaktu">Po poprawnym wysłaniu formularza pojawi się tu podsumowanie.</div>
+        </aside>
+      </div>
+    </div>
+  </main>
+  <footer class="py-4"><div class="container">&copy; 2026 Aqua Zielony Zakątek</div></footer>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="bootstrap/bootstrap.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
