@@ -48,6 +48,52 @@
         </div>
       </div>
     </section>
+    <section class="section-band">
+      <div class="container">
+        <div class="row g-4 align-items-center">
+          <div class="col-lg-6">
+            <h2 class="section-title">Akwarium, które żyje spokojnie</h2>
+            <div class="accent-line mb-3"></div>
+            <p>Najładniejsze zbiorniki nie powstają z pośpiechu. Potrzebują dojrzałego filtra, dobranych roślin, cierpliwego światła i ryb, które pasują do siebie temperamentem.</p>
+            <p>Właściwy dobór obsady jest kluczowy dla zachowania stabilności każdego zbiornika. Najlepiej sprawdzają się niewielkie ryby ławicowe oraz krewetki, które nie tylko zdobią akwarium, ale też pomagają w naturalnym utrzymaniu czystości.</p>
+          </div>
+          <div class="col-lg-6">
+            <div id="homeGallery" class="carousel photo-gallery" data-bs-ride="carousel" data-bs-interval="3500">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/neon-innesa.jpg" class="d-block w-100" alt="Neon Innesa">
+                  <div class="carousel-caption"><h3 class="h6 mb-1">Neon Innesa</h3><p class="mb-0 small">Paracheirodon innesi</p></div>
+                </div>
+                <div class="carousel-item">
+                  <img src="img/gupik.jpg" class="d-block w-100" alt="Gupik">
+                  <div class="carousel-caption"><h3 class="h6 mb-1">Gupik</h3><p class="mb-0 small">Poecilia reticulata</p></div>
+                </div>
+                <div class="carousel-item">
+                  <img src="img/kirys-panda.jpg" class="d-block w-100" alt="Kirys panda">
+                  <div class="carousel-caption"><h3 class="h6 mb-1">Kirys panda</h3><p class="mb-0 small">Corydoras panda</p></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section-band bg-white">
+      <div class="container">
+        <div class="d-flex align-items-end justify-content-between gap-3 flex-wrap mb-4">
+          <div>
+            <h2 class="section-title">Mini poradnik SPA</h2>
+            <div class="accent-line"></div>
+          </div>
+          <div class="btn-group" role="group" aria-label="Tematy poradnika">
+            <button class="btn btn-outline-primary active" data-zakladka-poradnika="start" onclick="pokazPoradnik('start')">Start</button>
+            <button class="btn btn-outline-success" data-zakladka-poradnika="woda" onclick="pokazPoradnik('woda')">Woda</button>
+            <button class="btn btn-outline-warning" data-zakladka-poradnika="swiatlo" onclick="pokazPoradnik('swiatlo')">Światło</button>
+          </div>
+        </div>
+        <div id="blokSpa" class="result-box wynik-poradnika poradnik-start p-4"></div>
+      </div>
+    </section>
   </main>
   <footer class="py-4">
     <div class="container d-flex flex-wrap justify-content-between gap-2">
